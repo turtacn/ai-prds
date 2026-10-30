@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台界面原型 - SecureGuard PRD</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'neutral'});</script>
+</head>
+<body>
+    <div class="app-container">
+
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <i class="fas fa-shield-halved"></i>
+                    <div>
+                        <span>SecureGuard</span>
+                        <div class="brand-tagline">SGCS PRD v1.0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-nav">
+                <a href="../index.html" class="nav-item ">
+                    <i class="fas fa-home"></i> 产品概览首页
+                </a>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">01 执行摘要</div>
+                    <a href="../01-executive-summary/summary.html" class="nav-item ">
+                        <i class="fas fa-file-contract"></i> 执行摘要
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">02 市场分析</div>
+                    <a href="../02-market-analysis/market-overview.html" class="nav-item ">
+                        <i class="fas fa-chart-line"></i> 市场概况
+                    </a>
+                    <a href="../02-market-analysis/competitor-analysis.html" class="nav-item ">
+                        <i class="fas fa-chess"></i> 竞品分析
+                    </a>
+                    <a href="../02-market-analysis/target-users.html" class="nav-item ">
+                        <i class="fas fa-users"></i> 目标用户画像
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">03 产品愿景与定位</div>
+                    <a href="../03-product-vision/vision-mission.html" class="nav-item ">
+                        <i class="fas fa-bullseye"></i> 愿景与使命
+                    </a>
+                    <a href="../03-product-vision/core-problems.html" class="nav-item ">
+                        <i class="fas fa-exclamation-triangle"></i> 核心问题定义
+                    </a>
+                    <a href="../03-product-vision/value-proposition.html" class="nav-item ">
+                        <i class="fas fa-gem"></i> 核心价值主张
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">04 功能需求</div>
+                    <a href="../04-functional-requirements/module-cve-scanning.html" class="nav-item ">
+                        <i class="fas fa-bug"></i> CVE漏洞扫描模块
+                    </a>
+                    <a href="../04-functional-requirements/module-gdpr-compliance.html" class="nav-item ">
+                        <i class="fas fa-user-shield"></i> GDPR合规模块
+                    </a>
+                    <a href="../04-functional-requirements/module-risk-prioritization.html" class="nav-item ">
+                        <i class="fas fa-sort-amount-up-alt"></i> 风险优先级引擎
+                    </a>
+                    <a href="../04-functional-requirements/module-remediation.html" class="nav-item ">
+                        <i class="fas fa-wrench"></i> 修复闭环管理
+                    </a>
+                    <a href="../04-functional-requirements/module-audit-reporting.html" class="nav-item ">
+                        <i class="fas fa-file-invoice"></i> 审计报告生成
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">05 技术架构</div>
+                    <a href="../05-technical-architecture/system-architecture.html" class="nav-item ">
+                        <i class="fas fa-sitemap"></i> 系统架构图
+                    </a>
+                    <a href="../05-technical-architecture/data-flow.html" class="nav-item ">
+                        <i class="fas fa-project-diagram"></i> 数据流设计
+                    </a>
+                    <a href="../05-technical-architecture/integration-apis.html" class="nav-item ">
+                        <i class="fas fa-network-wired"></i> 集成接口 API
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">06 用户体验</div>
+                    <a href="../06-user-experience/user-journey.html" class="nav-item ">
+                        <i class="fas fa-route"></i> 用户旅程地图
+                    </a>
+                    <a href="../06-user-experience/dashboard-mockup.html" class="nav-item active">
+                        <i class="fas fa-desktop"></i> 控制台界面原型
+                    </a>
+                    <a href="../06-user-experience/workflow-scenarios.html" class="nav-item ">
+                        <i class="fas fa-tasks"></i> 典型工作流场景
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">07 实施路线图</div>
+                    <a href="../07-implementation-roadmap/phase1-mvp.html" class="nav-item ">
+                        <i class="fas fa-rocket"></i> Phase 1: MVP
+                    </a>
+                    <a href="../07-implementation-roadmap/phase2-expansion.html" class="nav-item ">
+                        <i class="fas fa-expand-arrows-alt"></i> Phase 2: 功能扩展
+                    </a>
+                    <a href="../07-implementation-roadmap/phase3-ai-automation.html" class="nav-item ">
+                        <i class="fas fa-robot"></i> Phase 3: AI自动化
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">08 合规框架映射</div>
+                    <a href="../08-compliance-framework/gdpr-mapping.html" class="nav-item ">
+                        <i class="fas fa-scale-balanced"></i> GDPR条款映射
+                    </a>
+                    <a href="../08-compliance-framework/iso27001-alignment.html" class="nav-item ">
+                        <i class="fas fa-certificate"></i> ISO 27001对齐
+                    </a>
+                    <a href="../08-compliance-framework/cisa-kev-integration.html" class="nav-item ">
+                        <i class="fas fa-shield-cat"></i> CISA KEV集成
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">09 商业与定价</div>
+                    <a href="../09-pricing-licensing/pricing-model.html" class="nav-item ">
+                        <i class="fas fa-tags"></i> 定价与授权模式
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">10 附录</div>
+                    <a href="../10-appendix/glossary.html" class="nav-item ">
+                        <i class="fas fa-book"></i> 术语表
+                    </a>
+                    <a href="../10-appendix/references.html" class="nav-item ">
+                        <i class="fas fa-link"></i> 参考资料与来源
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <span><i class="fas fa-lock"></i> SGCS Internal</span>
+                <span>v1.0 Final</span>
+            </div>
+        </nav>
+
+        <div class="main-wrapper">
+            <header class="top-navbar">
+                <div class="top-navbar-left">
+                    <button class="toggle-sidebar-btn" id="toggleSidebarBtn"><i class="fas fa-bars"></i></button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="globalSearchInput" placeholder="搜索 PRD 文档、功能、API...">
+                    </div>
+                </div>
+                <div class="top-navbar-right">
+                    <span class="version-badge">v1.0 PRD</span>
+                    <button class="theme-toggle-btn" id="themeToggleBtn"><i class="fas fa-moon"></i> 深色模式</button>
+                </div>
+            </header>
+
+            <main class="content-area">
+                <div class="breadcrumb">
+                    <a href="../index.html">SGCS PRD</a> <i class="fas fa-chevron-right"></i>
+                    <span>06 用户体验</span> <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-current">控制台界面原型</span>
+                </div>
+
+
+<div class="page-header">
+    <h1 class="page-title"><i class="fas fa-desktop"></i> 控制台界面原型 (Dashboard Mockup)</h1>
+    <p class="page-subtitle">包含 CVE 风险分布、GDPR 合规评分、待修复趋势图与资产分类饼图的统一看板</p>
+</div>
+
+<div class="grid-4">
+    <div class="stat-card">
+        <div class="stat-icon critical"><i class="fas fa-exclamation-circle"></i></div>
+        <div><div class="stat-value">38</div><div class="stat-label">Critical 级漏洞 (待修复)</div></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon success"><i class="fas fa-check-circle"></i></div>
+        <div><div class="stat-value">94.2</div><div class="stat-label">GDPR 合规健康分</div></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon high"><i class="fas fa-bolt"></i></div>
+        <div><div class="stat-value">12</div><div class="stat-label">CISA KEV 在野利用</div></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon primary"><i class="fas fa-server"></i></div>
+        <div><div class="stat-value">1,250</div><div class="stat-label">已监控企业资产数</div></div>
+    </div>
+</div>
+
+<div class="grid-2" style="margin-top:20px;">
+    <div class="card">
+        <div class="card-header"><h3 class="card-title"><i class="fas fa-chart-bar"></i> 资产类型与 PII 分布</h3></div>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead><tr><th>资产分类</th><th>总数</th><th>关联 PII 敏感数据</th><th>安全合规状态</th></tr></thead>
+                <tbody>
+                    <tr><td>云数据库 (RDS/Postgres)</td><td>120</td><td>98 (高敏感)</td><td><span class="badge badge-success">正常</span></td>
+                    <tr><td>Kubernetes Pods</td><td>450</td><td>150</td><td><span class="badge badge-high">警告 (3 CVE)</span></td>
+                    <tr><td>Linux 生产服务器</td><td>380</td><td>85</td><td><span class="badge badge-critical">需关注</span></td>
+                    <tr><td>S3 存储桶</td><td>300</td><td>210</td><td><span class="badge badge-success">正常</span></td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header"><h3 class="card-title"><i class="fas fa-history"></i> 最近扫描与事件日志</h3></div>
+        <ul style="font-size:0.9rem; list-style:none;">
+            <li style="margin-bottom:12px;"><i class="fas fa-sync fa-spin" style="color:var(--primary-color)"></i> 10分钟前：对 <code>prod-eu-west-1</code> 完成全量 CVE 增量扫描</li>
+            <li style="margin-bottom:12px;"><i class="fas fa-shield-alt" style="color:var(--success-color)"></i> 25分钟前：针对 <code>CVE-2023-38606</code> 自动下发 WAF 虚拟防护规则</li>
+            <li style="margin-bottom:12px;"><i class="fas fa-file-download" style="color:var(--secondary-color)"></i> 1小时前：DPO 导出 <code>2024-Q2-GDPR-Audit-Package.pdf</code></li>
+        </ul>
+    </div>
+</div>
+
+
+                <footer class="prd-footer">
+                    <div>© 2024 SecureGuard Product Team. Confidential - For Internal PRD Review Only.</div>
+                    <div>文档状态: <span class="badge badge-success">Approved v1.0</span></div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
