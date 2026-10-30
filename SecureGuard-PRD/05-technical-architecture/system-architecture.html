@@ -6,8 +6,6 @@
     <title>系统架构图 - SecureGuard PRD</title>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'neutral'});</script>
 </head>
 <body>
     <div class="app-container">
@@ -184,41 +182,8 @@
 
 <div class="card">
     <div class="card-header"><h3 class="card-title"><i class="fas fa-project-diagram"></i> SGCS 整体系统技术架构拓扑</h3></div>
-    <div class="mermaid">
-    graph TD
-        subgraph 客户端与接入层
-            UI[Web 控制台 / UI]
-            API_GW[API 网关 / Kong Gateway]
-        end
-
-        subgraph SGCS 核心微服务引擎 (Kubernetes Cluster)
-            Scanner[CVE 扫描微服务 Engine]
-            PII_Finder[PII 数据识别 Engine]
-            Risk_Engine[智能风险关联引擎 (PRE Engine)]
-            Rem_Engine[修复与虚拟补丁 Engine]
-            Audit_Engine[审计与证据链 Engine]
-        end
-
-        subgraph 数据持久化与存储层
-            DB[(PostgreSQL - 业务与配置)]
-            ES[(ElasticSearch - 漏洞与日志库)]
-            Redis[(Redis - 高速缓存 & 队列)]
-        end
-
-        subgraph 外部数据源与集成
-            NVD[NVD / CISA KEV / EPSS]
-            Integrations[Jira / ServiceNow / Splunk SIEM]
-        end
-
-        UI --> API_GW
-        API_GW --> Scanner
-        API_GW --> PII_Finder
-        API_GW --> Risk_Engine
-        Scanner --> ES
-        PII_Finder --> ES
-        Risk_Engine --> DB
-        Rem_Engine --> Integrations
-        NVD --> Scanner
+    <div style="text-align: center; padding: 10px 0;">
+        <img src="../assets/images/system_architecture.png" alt="SGCS 整体系统技术架构拓扑" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 8px;">
     </div>
 </div>
 

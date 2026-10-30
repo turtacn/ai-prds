@@ -6,8 +6,6 @@
     <title>SecureGuard Compliance Suite - 产品概览 PRD</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'neutral'});</script>
 </head>
 <body>
     <div class="app-container">
@@ -279,13 +277,8 @@
                         <div class="card-header">
                             <h3 class="card-title"><i class="fas fa-tasks"></i> 近30天待修复漏洞与合规工单收敛趋势</h3>
                         </div>
-                        <div class="mermaid">
-                        xychart-beta
-                            title "近 30 天 CVE 漏洞与 GDPR DSAR 工单收敛趋势"
-                            x-axis ["Week 1", "Week 2", "Week 3", "Week 4"]
-                            y-axis "工单数量 (件)" 0 --> 200
-                            line [150, 120, 85, 38]
-                            line [24, 18, 12, 5]
+                        <div style="text-align: center; padding: 10px 0;">
+                            <img src="assets/images/trend_chart.png" alt="近30天待修复漏洞与合规工单收敛趋势图" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 8px;">
                         </div>
                     </div>
                 </div>

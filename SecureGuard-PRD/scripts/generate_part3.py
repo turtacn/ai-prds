@@ -1,5 +1,4 @@
 import os
-from build_prd_pages import page_wrapper, base_dir
 
 pages_data = {}
 
@@ -155,16 +154,8 @@ pages_data["07-implementation-roadmap/phase3-ai-automation.html"] = ("Phase 3: A
 
 <div class="card">
     <div class="card-header"><h3 class="card-title"><i class="fas fa-brain"></i> AI 智能与全球路线图</h3></div>
-    <div class="mermaid">
-    gantt
-        title SGCS 产品路线图 (Roadmap 2024)
-        dateFormat  YYYY-MM-DD
-        section Q1: MVP
-        核心 CVE 扫描与基础 PII :active, p1, 2024-01-01, 2024-03-31
-        section Q2-Q3: Expansion
-        虚拟补丁与 Jira/ServiceNow 集成 :p2, 2024-04-01, 2024-09-30
-        section Q4: AI & Global
-        AI 风险预测与全球数据中心部署 :p3, 2024-10-01, 2024-12-31
+    <div style="text-align: center; padding: 10px 0;">
+        <img src="../assets/images/roadmap_gantt.png" alt="SGCS 产品路线图 (Roadmap 2024)" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 8px;">
     </div>
 </div>
 ''')
@@ -302,4 +293,4 @@ pages_data["10-appendix/references.html"] = ("参考资料与来源", "10 附录
 </div>
 ''')
 
-print("Section 06-10 generated in dictionary.")
+print("Part 3 updated with static PNG image tags.")

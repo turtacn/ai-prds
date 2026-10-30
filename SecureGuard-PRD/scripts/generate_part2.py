@@ -1,5 +1,4 @@
 import os
-from build_prd_pages import page_wrapper, base_dir
 
 pages_data = {}
 
@@ -171,41 +170,8 @@ pages_data["05-technical-architecture/system-architecture.html"] = ("系统架�
 
 <div class="card">
     <div class="card-header"><h3 class="card-title"><i class="fas fa-project-diagram"></i> SGCS 整体系统技术架构拓扑</h3></div>
-    <div class="mermaid">
-    graph TD
-        subgraph 客户端与接入层
-            UI[Web 控制台 / UI]
-            API_GW[API 网关 / Kong Gateway]
-        end
-
-        subgraph SGCS 核心微服务引擎 (Kubernetes Cluster)
-            Scanner[CVE 扫描微服务 Engine]
-            PII_Finder[PII 数据识别 Engine]
-            Risk_Engine[智能风险关联引擎 (PRE Engine)]
-            Rem_Engine[修复与虚拟补丁 Engine]
-            Audit_Engine[审计与证据链 Engine]
-        end
-
-        subgraph 数据持久化与存储层
-            DB[(PostgreSQL - 业务与配置)]
-            ES[(ElasticSearch - 漏洞与日志库)]
-            Redis[(Redis - 高速缓存 & 队列)]
-        end
-
-        subgraph 外部数据源与集成
-            NVD[NVD / CISA KEV / EPSS]
-            Integrations[Jira / ServiceNow / Splunk SIEM]
-        end
-
-        UI --> API_GW
-        API_GW --> Scanner
-        API_GW --> PII_Finder
-        API_GW --> Risk_Engine
-        Scanner --> ES
-        PII_Finder --> ES
-        Risk_Engine --> DB
-        Rem_Engine --> Integrations
-        NVD --> Scanner
+    <div style="text-align: center; padding: 10px 0;">
+        <img src="../assets/images/system_architecture.png" alt="SGCS 整体系统技术架构拓扑" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 8px;">
     </div>
 </div>
 ''')
@@ -218,20 +184,8 @@ pages_data["05-technical-architecture/data-flow.html"] = ("数据流设计", "05
 
 <div class="card">
     <div class="card-header"><h3 class="card-title"><i class="fas fa-stream"></i> 端到端数据处理流水线</h3></div>
-    <div class="mermaid">
-    sequenceDiagram
-        autonumber
-        participant Asset as 客户主机/云资产
-        participant Agent as SGCS Agent/Scanner
-        participant Engine as 智能风险关联引擎
-        participant Ticket as Jira/ServiceNow
-        participant Audit as 合规证据库
-
-        Asset->>Agent: 1. 上报 OS/组件清单与 PII 特征
-        Agent->>Engine: 2. 传输资产漏洞与数据敏感度元数据
-        Engine->>Engine: 3. 匹配 CISA KEV + 计算 PRE 风险暴露值
-        Engine->>Ticket: 4. 超过 SLA 阈值自动触发工单指派
-        Engine->>Audit: 5. 生成不可篡改的合规审计日志与时间戳
+    <div style="text-align: center; padding: 10px 0;">
+        <img src="../assets/images/data_flow.png" alt="端到端数据处理流水线" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 8px;">
     </div>
 </div>
 ''')
@@ -270,4 +224,4 @@ pages_data["05-technical-architecture/integration-apis.html"] = ("集成接口 A
 </div>
 ''')
 
-print("Section 04-05 generated in dictionary.")
+print("Part 2 updated with static PNG image tags.")

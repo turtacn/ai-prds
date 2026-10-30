@@ -6,8 +6,6 @@
     <title>数据流设计 - SecureGuard PRD</title>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'neutral'});</script>
 </head>
 <body>
     <div class="app-container">
@@ -184,20 +182,8 @@
 
 <div class="card">
     <div class="card-header"><h3 class="card-title"><i class="fas fa-stream"></i> 端到端数据处理流水线</h3></div>
-    <div class="mermaid">
-    sequenceDiagram
-        autonumber
-        participant Asset as 客户主机/云资产
-        participant Agent as SGCS Agent/Scanner
-        participant Engine as 智能风险关联引擎
-        participant Ticket as Jira/ServiceNow
-        participant Audit as 合规证据库
-
-        Asset->>Agent: 1. 上报 OS/组件清单与 PII 特征
-        Agent->>Engine: 2. 传输资产漏洞与数据敏感度元数据
-        Engine->>Engine: 3. 匹配 CISA KEV + 计算 PRE 风险暴露值
-        Engine->>Ticket: 4. 超过 SLA 阈值自动触发工单指派
-        Engine->>Audit: 5. 生成不可篡改的合规审计日志与时间戳
+    <div style="text-align: center; padding: 10px 0;">
+        <img src="../assets/images/data_flow.png" alt="端到端数据处理流水线" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 8px;">
     </div>
 </div>
 

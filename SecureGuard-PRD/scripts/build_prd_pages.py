@@ -2,38 +2,6 @@ import os
 
 base_dir = "SecureGuard-PRD"
 
-# Navigation mapping for header generation
-nav_items = [
-    ("index.html", "fa-home", "产品概览首页", "root"),
-    ("01-executive-summary/summary.html", "fa-file-contract", "执行摘要", "01"),
-    ("02-market-analysis/market-overview.html", "fa-chart-line", "市场概况", "02"),
-    ("02-market-analysis/competitor-analysis.html", "fa-chess", "竞品分析", "02"),
-    ("02-market-analysis/target-users.html", "fa-users", "目标用户画像", "02"),
-    ("03-product-vision/vision-mission.html", "fa-bullseye", "愿景与使命", "03"),
-    ("03-product-vision/core-problems.html", "fa-exclamation-triangle", "核心问题定义", "03"),
-    ("03-product-vision/value-proposition.html", "fa-gem", "核心价值主张", "03"),
-    ("04-functional-requirements/module-cve-scanning.html", "fa-bug", "CVE漏洞扫描模块", "04"),
-    ("04-functional-requirements/module-gdpr-compliance.html", "fa-user-shield", "GDPR合规模块", "04"),
-    ("04-functional-requirements/module-risk-prioritization.html", "fa-sort-amount-up-alt", "风险优先级引擎", "04"),
-    ("04-functional-requirements/module-remediation.html", "fa-wrench", "修复闭环管理", "04"),
-    ("04-functional-requirements/module-audit-reporting.html", "fa-file-invoice", "审计报告生成", "04"),
-    ("05-technical-architecture/system-architecture.html", "fa-sitemap", "系统架构图", "05"),
-    ("05-technical-architecture/data-flow.html", "fa-project-diagram", "数据流设计", "05"),
-    ("05-technical-architecture/integration-apis.html", "fa-network-wired", "集成接口 API", "05"),
-    ("06-user-experience/user-journey.html", "fa-route", "用户旅程地图", "06"),
-    ("06-user-experience/dashboard-mockup.html", "fa-desktop", "控制台界面原型", "06"),
-    ("06-user-experience/workflow-scenarios.html", "fa-tasks", "典型工作流场景", "06"),
-    ("07-implementation-roadmap/phase1-mvp.html", "fa-rocket", "Phase 1: MVP", "07"),
-    ("07-implementation-roadmap/phase2-expansion.html", "fa-expand-arrows-alt", "Phase 2: 功能扩展", "07"),
-    ("07-implementation-roadmap/phase3-ai-automation.html", "fa-robot", "Phase 3: AI自动化", "07"),
-    ("08-compliance-framework/gdpr-mapping.html", "fa-scale-balanced", "GDPR条款映射", "08"),
-    ("08-compliance-framework/iso27001-alignment.html", "fa-certificate", "ISO 27001对齐", "08"),
-    ("08-compliance-framework/cisa-kev-integration.html", "fa-shield-cat", "CISA KEV集成", "08"),
-    ("09-pricing-licensing/pricing-model.html", "fa-tags", "定价与授权模式", "09"),
-    ("10-appendix/glossary.html", "fa-book", "术语表", "10"),
-    ("10-appendix/references.html", "fa-link", "参考资料与来源", "10"),
-]
-
 def render_sidebar(current_rel_path, rel_prefix):
     sidebar_html = f'''
         <nav class="sidebar">
@@ -192,8 +160,6 @@ def page_wrapper(title, section_name, current_rel_path, content_body):
     <title>{title} - SecureGuard PRD</title>
     <link rel="stylesheet" href="{rel_prefix}assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({{startOnLoad:true, theme: 'neutral'}});</script>
 </head>
 <body>
     <div class="app-container">
@@ -234,4 +200,4 @@ def page_wrapper(title, section_name, current_rel_path, content_body):
 </html>'''
     return html
 
-print("Generator helper defined successfully.")
+print("Generator helper updated without Mermaid CDN.")
